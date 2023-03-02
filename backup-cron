@@ -1,0 +1,6 @@
+0 0 * * *   /backup.sh
+0 4 * * *   /backup.sh
+0 8 * * *   /backup.sh
+0 12 * * *  /backup.sh
+0 16 * * *  /backup.sh
+0 20 * * *  /backup.sh
