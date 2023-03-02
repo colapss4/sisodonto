@@ -93,6 +93,11 @@ class CreateTableUsers extends Migration
                 'constraint' => 100,
                 'null' => true
             ],
+            'active' => [
+                'type' => 'BOOLEAN',
+                'null' => false,
+                'default' => true
+            ],
             'created_at' => [
                 'type' => 'DATETIME',
                 'null' => true,
