@@ -8,6 +8,9 @@ class Register extends BaseController
 {
     public function index()
     {
-        return view('register');
+        $data = [
+            'title' => 'Cadastro'
+        ];
+        return view('register', $data);
     }
 }

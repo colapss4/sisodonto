@@ -8,6 +8,9 @@ class Reset extends BaseController
 {
     public function index()
     {
-        return view('reset');
+        $data = [
+            'title' => 'Redefinir Senha'
+        ];
+        return view('reset', $data);
     }
 }

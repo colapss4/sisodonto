@@ -2,11 +2,7 @@
 
 <?= $this->section('title') ?>
 
-<? if (isset($title)) {
-    echo $title . ' - ' . env('APP_NAME');
-} else {
-    echo env('APP_NAME');
-} ?>
+<?= isset($title) ? $title . ' - ' . env('APP_NAME') : env('APP_NAME') ?>
 
 <?= $this->endSection() ?>
 
@@ -18,7 +14,7 @@
 
             <div class="card">
                 <div class="card-body">
-                    <h3 class="card-title">Redefinir Senha</h3>
+                    <h3 class="card-title"><?= isset($title) ? $title : 'Redefinir Senha' ?></h3>
                     <!-- <p class="card-text"></p> -->
                     <hr>
                     <form>
