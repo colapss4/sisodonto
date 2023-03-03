@@ -37,11 +37,6 @@ class CreateTableUsers extends Migration
                 'constraint' => 128,
                 'null' => false
             ],
-            'gender' => [
-                'type' => 'ENUM',
-                'constraint' => ['M', 'F'],
-                'null' => false
-            ],
             'cpf' => [
                 'type' => 'VARCHAR',
                 'constraint' => 11,
