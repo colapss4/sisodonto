@@ -10,12 +10,23 @@ class UserModel extends BaseModel
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = User::class;
-    protected $useSoftDeletes   = true;
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
+        'name',
         'email',
         'phone_number',
-        'cpf'
+        'password',
+        'cpf',
+        'cro',
+        'cep',
+        'address',
+        'address_number',
+        'address_complement',
+        'address_district',
+        'address_city',
+        'address_state',
+        'active'
     ];
 
     // Dates

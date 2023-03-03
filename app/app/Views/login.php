@@ -17,21 +17,38 @@
                     <h3 class="card-title"><?= isset($title) ? $title : 'Login' ?></h3>
                     <p class="card-text">Acesso ao sistema</p>
                     <hr>
-                    <form>
+
+                    <?
+                    $error = session()->getFlashdata('error');
+                    session()->remove('error');
+                    if (!is_null($error)) {
+                    ?>
+                        <div class="alert alert-danger" role="alert"><?= $error ?></div>
+                    <? } ?>
+
+                    <?
+                    $success = session()->getFlashdata('success');
+                    session()->remove('success');
+                    if (!is_null($success)) {
+                    ?>
+                        <div class="alert alert-success" role="alert"><?= $success ?></div>
+                    <? } ?>
+
+                    <form action="/login" method="post">
+
+                        <?= csrf_field() ?>
 
                         <div class="mb-3">
-                            <label for="" class="form-label">Email</label>
-                            <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="abc@mail.com">
-                            <small id="emailHelpId" class="form-text text-muted">Help text</small>
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" value="<?= set_value('email') ?>" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="" class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="" id="" placeholder="">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" class="form-control" name="senha" id="senha" value="<?= set_value('senha') ?>" minlength="8" maxlength="20" required>
                         </div>
 
                         <div class="mb-3">
-
                             <button type="submit" class="btn btn-primary">Entrar</button>
                         </div>
 
@@ -39,8 +56,8 @@
                     <hr>
 
                     <div class="btn-group" role="group" aria-label="Basic example" style="width: 100%;">
-                        <a name="" id="" class="btn btn-link" href="/reset" role="button" style="width: 50%;">Esqueci minha senha</a>|
-                        <a name="" id="" class="btn btn-link" href="/register" role="button" style="width: 50%;">Cadastre-se</a>
+                        <a class="btn btn-link" href="/reset" role="button" style="width: 50%;">Esqueci minha senha</a>|
+                        <a class="btn btn-link" href="/register" role="button" style="width: 50%;">Cadastre-se</a>
                     </div>
 
                 </div>
