@@ -18,38 +18,17 @@
 
             <div class="card">
                 <div class="card-body">
-                    <h3 class="card-title">Cadastro</h3>
+                    <h3 class="card-title">Redefinir Senha</h3>
                     <!-- <p class="card-text"></p> -->
                     <hr>
                     <form>
-
-                        <div class="mb-3">
-                            <label for="" class="form-label">Nome</label>
-                            <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                            <small id="helpId" class="text-muted">Help text</small>
-                        </div>
 
                         <div class="mb-3">
                             <label for="" class="form-label">Email</label>
                             <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="abc@mail.com">
                             <small id="emailHelpId" class="form-text text-muted">Help text</small>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="" class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="" id="" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="" class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="" id="" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="" class="form-label">Confirmar Senha</label>
-                            <input type="password" class="form-control" name="" id="" placeholder="">
-                        </div>
-
+                        
                         <div class="mb-3">
                             <label for="" class="form-label">CPF</label>
                             <input type="password" class="form-control" name="" id="" placeholder="">
@@ -57,14 +36,14 @@
 
                         <div class="mb-3">
 
-                            <button type="submit" class="btn btn-primary">Confirmar</button>
+                            <button type="submit" class="btn btn-primary">Enviar Email</button>
                         </div>
 
                     </form>
                     <hr>
 
                     <div class="btn-group" role="group" aria-label="Basic example" style="width: 100%;">
-                        <a name="" id="" class="btn btn-link" href="/reset" role="button" style="width: 50%;">Esqueci minha senha</a>|
+                        <a name="" id="" class="btn btn-link" href="/register" role="button" style="width: 50%;">Cadastre-se</a>|
                         <a name="" id="" class="btn btn-link" href="/login" role="button" style="width: 50%;">Voltar ao login</a>
                     </div>
 
