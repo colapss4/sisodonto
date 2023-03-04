@@ -3,6 +3,7 @@
 namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
+use Config\Database;
 
 class CreateTableClinics extends Migration
 {
@@ -112,6 +113,11 @@ class CreateTableClinics extends Migration
         $this->forge->addKey('id', true);
 
         $this->forge->createTable('clinics');
+
+        if (ENVIRONMENT != 'production') {
+            $seeder = Database::seeder();
+            $seeder->call('ClinicTestSeeder');
+        }
     }
 
     public function down()
