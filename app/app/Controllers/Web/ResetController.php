@@ -4,7 +4,7 @@ namespace App\Controllers\Web;
 
 use App\Controllers\BaseController;
 
-class Reset extends BaseController
+class ResetController extends BaseController
 {
     public function index()
     {

@@ -65,7 +65,7 @@ class CreateTableUserClinic extends Migration
 
         if (ENVIRONMENT != 'production') {
             $seeder = Database::seeder();
-            $seeder->call('UserClinicTestSeeder');
+            $seeder->call('TestUserClinicSeeder');
         }
     }
 

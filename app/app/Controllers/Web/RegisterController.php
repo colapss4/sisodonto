@@ -7,9 +7,8 @@ use App\Models\UserModel;
 use App\Services\CPFService;
 use CodeIgniter\Config\Factories;
 use CodeIgniter\Database\Exceptions\DatabaseException;
-use Exception;
 
-class Register extends BaseController
+class RegisterController extends BaseController
 {
     private $title;
     private $cpfService;

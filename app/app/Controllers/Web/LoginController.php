@@ -5,7 +5,7 @@ namespace App\Controllers\Web;
 use App\Controllers\BaseController;
 use App\Models\UserModel;
 
-class Login extends BaseController
+class LoginController extends BaseController
 {
     private $title;
 

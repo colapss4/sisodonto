@@ -117,7 +117,7 @@ class CreateTableUsers extends Migration
 
         if (ENVIRONMENT != 'production') {
             $seeder = Database::seeder();
-            $seeder->call('UserTestSeeder');
+            $seeder->call('TestUserSeeder');
         }
     }
 

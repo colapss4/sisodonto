@@ -4,7 +4,7 @@ namespace App\Controllers\Web;
 
 use App\Controllers\BaseController;
 
-class Clinics extends BaseController
+class ClinicsController extends BaseController
 {
     private $title;
 
