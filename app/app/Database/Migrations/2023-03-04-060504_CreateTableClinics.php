@@ -3,9 +3,8 @@
 namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
-use Config\Database;
 
-class CreateTableUsers extends Migration
+class CreateTableClinics extends Migration
 {
     public function up()
     {
@@ -16,10 +15,25 @@ class CreateTableUsers extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'name' => [
+            'corporate_name' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100
+            ],
+            'fantasy_name' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,
-                'null' => false
+                'null' => true
+            ],
+            'responsible_name' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => true
+            ],
+            'cnpj' => [
+                'type' => 'VARCHAR',
+                'constraint' => 14,
+                'unique' => true,
+                'null' => true
             ],
             'email' => [
                 'type' => 'VARCHAR',
@@ -32,22 +46,6 @@ class CreateTableUsers extends Migration
                 'constraint' => 11,
                 'unique' => true,
                 'null' => false
-            ],
-            'password' => [
-                'type' => 'VARCHAR',
-                'constraint' => 128,
-                'null' => false
-            ],
-            'cpf' => [
-                'type' => 'VARCHAR',
-                'constraint' => 11,
-                'unique' => true,
-                'null' => true
-            ],
-            'cro' => [
-                'type' => 'VARCHAR',
-                'constraint' => 10,
-                'null' => true
             ],
             'cep' => [
                 'type' => 'VARCHAR',
@@ -113,16 +111,11 @@ class CreateTableUsers extends Migration
 
         $this->forge->addKey('id', true);
 
-        $this->forge->createTable('users');
-
-        if (ENVIRONMENT != 'production') {
-            $seeder = Database::seeder();
-            $seeder->call('UserTestSeeder');
-        }
+        $this->forge->createTable('clinics');
     }
 
     public function down()
     {
-        $this->forge->dropTable('users');
+        $this->forge->dropTable('clinics');
     }
 }

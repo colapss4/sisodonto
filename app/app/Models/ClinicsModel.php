@@ -2,21 +2,33 @@
 
 namespace App\Models;
 
-use App\Entities\UserRole;
+use App\Entities\Clinic;
 
-class UserRoleModel extends BaseModel
+class ClinicModel extends BaseModel
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'user_roles';
+    protected $table            = 'clinics';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
-    protected $returnType       = UserRole::class;
+    protected $returnType       = Clinic::class;
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'description',
-        'slug'
+        'corporate_name',
+        'fantasy_name',
+        'responsible_name',
+        'cnpj',
+        'email',
+        'phone_number',
+        'cep',
+        'address',
+        'address_number',
+        'address_complement',
+        'address_district',
+        'address_city',
+        'address_state',
+        'active'
     ];
 
     // Dates
@@ -26,7 +38,7 @@ class UserRoleModel extends BaseModel
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    // Validation
+    // // Validation
     // protected $validationRules      = [];
     // protected $validationMessages   = [];
     // protected $skipValidation       = false;

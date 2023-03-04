@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Entities\User;
+
 class UserModel extends BaseModel
 {
     protected $DBGroup          = 'default';
@@ -10,7 +12,7 @@ class UserModel extends BaseModel
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = User::class;
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     protected $allowedFields    = [
         'name',
