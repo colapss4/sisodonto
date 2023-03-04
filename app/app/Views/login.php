@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title"><?= isset($title) ? $title : 'Login' ?></h3>
-                    <p class="card-text">Acesso ao sistema</p>
+                    <!-- <p class="card-text"></p> -->
                     <hr>
 
                     <?

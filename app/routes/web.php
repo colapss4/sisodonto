@@ -5,4 +5,5 @@ $routes->post('/login', 'Web\LoginController::authenticate', ['as' => 'login.pos
 $routes->get('/register', 'Web\RegisterController::index', ['as' => 'register']);
 $routes->post('/register', 'Web\RegisterController::register', ['as' => 'register.post']);
 $routes->get('/reset', 'Web\ResetController::index', ['as' => 'reset']);
+$routes->post('/reset', 'Web\ResetController::reset', ['as' => 'reset.post']);
 $routes->get('/clinics', 'Web\ClinicsController::index', ['as' => 'clinics']);
