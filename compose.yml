@@ -9,6 +9,7 @@ services:
       - 8888:80
     volumes:
       - ./app:/var/www/html/sisodonto
+    working_dir: /var/www/html/sisodonto
 
   mysql:
     container_name: database
