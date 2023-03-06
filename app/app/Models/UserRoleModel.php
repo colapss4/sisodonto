@@ -2,33 +2,21 @@
 
 namespace App\Models;
 
-use App\Entities\User;
+use App\Entities\UserRole;
 
-class UserModel extends BaseModel
+class UserRoleModel extends BaseModel
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'users';
+    protected $table            = 'user_roles';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
-    protected $returnType       = User::class;
+    protected $returnType       = UserRole::class;
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'name',
-        'email',
-        'phone_number',
-        'password',
-        'cpf',
-        'cro',
-        'cep',
-        'address',
-        'address_number',
-        'address_complement',
-        'address_district',
-        'address_city',
-        'address_state',
-        'active'
+        'description',
+        'slug'
     ];
 
     // Dates
@@ -38,7 +26,7 @@ class UserModel extends BaseModel
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    // // Validation
+    // Validation
     // protected $validationRules      = [];
     // protected $validationMessages   = [];
     // protected $skipValidation       = false;

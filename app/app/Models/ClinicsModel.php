@@ -2,25 +2,25 @@
 
 namespace App\Models;
 
-use App\Entities\User;
+use App\Entities\Clinic;
 
-class UserModel extends BaseModel
+class ClinicModel extends BaseModel
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'users';
+    protected $table            = 'clinics';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
-    protected $returnType       = User::class;
+    protected $returnType       = Clinic::class;
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'name',
+        'corporate_name',
+        'fantasy_name',
+        'responsible_name',
+        'cnpj',
         'email',
         'phone_number',
-        'password',
-        'cpf',
-        'cro',
         'cep',
         'address',
         'address_number',

@@ -2,33 +2,22 @@
 
 namespace App\Models;
 
-use App\Entities\User;
+use App\Entities\UserClinic;
 
-class UserModel extends BaseModel
+class UserClinicModel extends BaseModel
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'users';
+    protected $table            = 'user_clinic';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
-    protected $returnType       = User::class;
-    protected $useSoftDeletes   = true;
+    protected $returnType       = UserClinic::class;
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'name',
-        'email',
-        'phone_number',
-        'password',
-        'cpf',
-        'cro',
-        'cep',
-        'address',
-        'address_number',
-        'address_complement',
-        'address_district',
-        'address_city',
-        'address_state',
-        'active'
+        'users_id',
+        'clinics_id',
+        'user_roles_id'
     ];
 
     // Dates
@@ -38,7 +27,7 @@ class UserModel extends BaseModel
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    // // Validation
+    // Validation
     // protected $validationRules      = [];
     // protected $validationMessages   = [];
     // protected $skipValidation       = false;

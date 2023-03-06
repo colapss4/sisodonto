@@ -9,6 +9,8 @@ services:
       - 8888:80
     volumes:
       - ./app:/var/www/html/sisodonto
+      - ./php-conf.ini:/usr/local/etc/php/conf.d/sisodonto.ini
+    working_dir: /var/www/html/sisodonto
 
   mysql:
     container_name: database
@@ -27,3 +29,12 @@ services:
       - ./dumps:/dumps
       - ./scripts:/scripts
       - ./initdb:/docker-entrypoint-initdb.d
+
+  # smtp server for development tests
+  mailhog:
+    container_name: smtp-server
+    image: mailhog/mailhog
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
